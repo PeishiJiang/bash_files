@@ -1,0 +1,42 @@
+# ~/.tmuxinator/vimpractice.yml
+
+name: vimpractice
+root: /Users/Ben1897/Documents/research/notes/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t info
+
+windows:
+  - editor:
+      #layout: main-vertical
+      layout: 271a,272x60,0,0{183x60,0,0,32,88x60,184,0[88x29,184,0,33,88x30,184,30,34]}
+      panes:
+        - vi -S ~/.vim/session/test.vim
+        #- vi 
+        - 
+        - 
+  #- notebook: workon geosci; jupyter notebook
